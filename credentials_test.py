@@ -12,7 +12,7 @@ class TestCredential(unittest.TestCase):
         The setUp method will run before each test case
         '''
 
-        self.new_credential = Credentials('Twitter','fog123')
+        self.new_credential = Credentials('Instagram','77carey')
         
     def test_init(self):
         
@@ -20,8 +20,8 @@ class TestCredential(unittest.TestCase):
         test_init test case to test if the object is initialized properly
         '''
 
-        self.assertEqual(self.new_credential.credential_detail,"Twitter")
-        self.assertEqual(self.new_credential.password,"fog123")    
+        self.assertEqual(self.new_credential.credential_detail,"Instagram")
+        self.assertEqual(self.new_credential.password,"77carey")    
 
     def test_save_credential(self):
         
@@ -80,9 +80,9 @@ class TestCredential(unittest.TestCase):
         """
 
         self.new_credential.save_credential()
-        test_credential = Credentials("Twitter","test3") 
+        test_credential = Credentials("Instagram","test3") 
         test_credential.save_credential()
-        found_credential = Credentials.find_by_name("Twitter")
+        found_credential = Credentials.find_by_name("Instagram")
         self.assertEqual(found_credential.credential_detail, test_credential.credential_detail)
 
     def test_credential_exists(self):
@@ -90,9 +90,9 @@ class TestCredential(unittest.TestCase):
         This test is to check if credentials exists when searched with the credential details
         '''
         self.new_credential.save_credential()
-        test_credential = Credentials("Twitter","test12")
+        test_credential = Credentials("Instagram","test12")
         test_credential.save_credential()
-        credential_exists = Credentials.find_by_name("Twitter")
+        credential_exists = Credentials.find_by_name("Instagram")
                                             
         self.assertTrue(credential_exists)
 

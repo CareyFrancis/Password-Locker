@@ -12,16 +12,16 @@ class TestUser(unittest.TestCase):
         '''
         Set up method to run before each test cases tp check if the class initialized
         '''
-        self.new_user = User("Joy","jj","joy@gmail.com")
+        self.new_user = User("Carey","carey77","francis@gmail.com")
 
     def test_init(self):
         '''
         test_init test case to test if the object is initialized properly
         '''
 
-        self.assertEqual(self.new_user.username,"Joy")
-        self.assertEqual(self.new_user.password,"jj")
-        self.assertEqual(self.new_user.email,"joy@gmail.com")
+        self.assertEqual(self.new_user.username,"Carey")
+        self.assertEqual(self.new_user.password,"carey77")
+        self.assertEqual(self.new_user.email,"francis@gmail.com")
 
     def test_save_user(self):
         '''

@@ -4,6 +4,7 @@ class Credentials:
     '''
     pass
     credential_list = []
+    
     def __init__(self,credential_detail,password,):
         '''__init__ methods helps us define properties for our objects
         '''
@@ -59,7 +60,9 @@ class Credentials:
         """
         return cls.credential_list
     
-    def generate_password(stringLength=8,char= string.ascii_letters+string.digits):
+    
+    def generate_password(stringLength=11):
+        letters = string.ascii_letters
         '''
         This is a method to generate random string passwords for the application
         '''
