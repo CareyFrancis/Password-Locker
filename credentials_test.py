@@ -11,3 +11,11 @@ class TestCredential(unittest.TestCase):
         The setUp method will run before each test case
         '''
         self.new_credential = Credentials('Twitter','fog123')
+        
+    def test_init(self):
+        '''
+        test_init test case to test if the object is initialized properly
+        '''
+
+        self.assertEqual(self.new_credential.credential_detail,"Twitter")
+        self.assertEqual(self.new_credential.password,"fog123")    
