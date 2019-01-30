@@ -12,7 +12,16 @@ class Credentials:
         self.password = password
     
     #credential_list = [] # Empty credential list
+
     def save_credential(self):
         '''save_credential method saves credentials objects into list
         '''
         Credentials.credential_list.append(self)
+        
+    def delete_credential(self):
+
+        '''
+        delete_credential method deletes a saved credential ser from the user_list
+        '''
+
+        Credentials.credential_list.remove(self)
