@@ -19,11 +19,10 @@ class TestCredential(unittest.TestCase):
 
         self.assertEqual(self.new_credential.credential_detail,"Twitter")
         self.assertEqual(self.new_credential.password,"fog123")    
-
-    def delete_credential(self):
-
+    def test_save_credential(self):
         '''
-        delete_credential method deletes a saved credential ser from the user_list
+        test_save_credential test case to test if  credentials object are saved into
+         the credential list
         '''
-
-        Credentials.credential_list.remove(self)
+        self.new_credential.save_credential() 
+        self.assertEqual(len(Credentials.credential_list),1)
