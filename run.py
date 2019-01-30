@@ -84,7 +84,7 @@ def display_user():
 
 
 def main():
-    print("Hello Welcome to your login. What is your name?")
+    print("Hello Welcome to the login. Please input your name?")
     user_name = input()
 
     print(f"Hello {user_name}. what would you like to do?")
@@ -108,19 +108,14 @@ def main():
             print ('\n')
         elif short_code == 'dc':
             
-                print("Here is a list of your details")
+                print("Here's a list of your details")
                 print('\n')
                 for user in display_user():
                     print(f"{user_name}... {email} .....")
                     print('\n')
                     
-            # print(f"{user_name} {email} {password}")
-            # else:
-            #     print('\n')
-            #     print("You dont seem to have any details saved yet")
-            #     print('\n')
         elif short_code == "ex":
-            print("Bye .......")
+            print("Alright then, later .......")
             break
         else:
             print("I really didn't get that. Please use the short codes")
