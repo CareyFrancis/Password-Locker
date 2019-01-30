@@ -1,8 +1,2 @@
-import pyperclip
-import random
-import string
-class Credentials:
-    '''
-    class that generates  instances of credential
-    '''
-    credential_list = []
+import unittest
+from credentials import Credentials
